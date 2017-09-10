@@ -1,0 +1,176 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url("../images/hotdogs.jpg");
+  background-attachment: fixed;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 1.7em;
+  background-color: #012d77;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.1em;
+  font-family: 'Bad Script', cursive;
+}
+
+/*a:hover{
+  color: rgb(45, 194, 204);   /*Esto hay que verlo porque aplica a todo el body*/
+}*/
+
+
+.main-nav{
+  background-color: rgba(121, 121, 121,0.4);
+  width: 100%;
+}
+
+.main-nav ul{
+  list-style: none; /* Saca la viñeta de los <li> */
+  margin: 0;
+  padding: 0;
+  text-align: center; /* centra horizontalmente los <li> pues estos están como display: inline-block*/
+}
+
+.main-nav li{
+  display: inline-block; /* Los alinea en horizontal y los vuelve un elemento de semi bloque */
+  margin: 0 15px;
+}
+
+.main-nav a{
+  font-size: 17px;
+  text-decoration: none; /* Saca el subrayado */
+  color: #ffffff;
+  display: block;
+  padding: 10px 15px; /* de arriba y abajo,   de los costados   */
+}
+
+.main-nav a i{
+  display: inline-block; /* para darle tamaño al <i> */
+  vertical-align: middle; /*alinea verticalmente hermanos de inline-block*/
+  width: 30px;
+  height: 30px;
+  background-color: #777;
+  color: #FFF;
+  line-height: 30px; /*Centra verticalmente el contenido*/
+  border-radius: 50%; /*Redondea las esquinas*/
+}
+
+.login{
+  background-color: rgba(37, 219, 77,0.8);
+  border-radius: 5%;
+  padding: 5px 10px;
+}
+
+.sugerencias{
+  color: #000;
+}
+
+.banner{
+  width: 100%;
+  border: solid 1px #cded4b;
+}
+
+/*-------------------Registro y Login----------------------------*/
+
+.form-box{
+  background-color: white;
+  opacity: 0.9;
+  width: 35%;
+  margin: auto;
+  padding: 20px 20px;
+  border-radius: 2%;
+  color: black;
+  font-size: 16px;
+}
+.form-box a{
+  color:blue;
+}
+
+.register{
+  width: 380px;
+  display: block;
+  margin: auto;
+  padding: 20px 20px;
+  display: inline-block;
+}
+
+.register input{
+  width: 300px;
+  height: 35px;
+  padding: 5px 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.register .check-box{
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+button{
+  width: 70%;
+  height: 40px;
+  margin-left: auto;
+  background-color: #EA8A2A;
+  border: none;
+  border-radius: 3%;
+  color:white;
+  font-size: 22px;
+}
+
+.login-box{
+  background-color: white;
+  width: 380px;
+  display: block;
+  margin: auto;
+  padding: 20px 20px;
+  display: inline-block;
+}
+
+.login-box input{
+  width: 300px;
+  height: 35px;
+  padding: 5px 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.login-box .check-box{
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+.recover-box{
+  background-color: white;
+  width: 380px;
+  display: block;
+  margin: auto;
+  padding: 20px 20px;
+  display: inline-block;
+}
+
+.recover-box input{
+  width: 300px;
+  height: 35px;
+  padding: 5px 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.recover-box button{
+  width: 70%;
+  height: 40px;
+  margin-left: auto;
+  background-color: #EA8A2A;
+  border: none;
+  border-radius: 3%;
+  color:white;
+  font-size: 22px;
+}
