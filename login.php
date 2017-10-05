@@ -1,4 +1,33 @@
+<?php
+require_once("funciones.php");
+// si el usuario esta logueado redirecciono a pagina de inicio
+  if(estaLogueado()) {
+    header("location:inicio.php");exit;
+  }
+//declaro array de errores vacio !
+  $errores = [];
 
+//si me envian algo por post, entro a este if
+  if ($_POST) {
+	 // en el array "errores", declarado vacio anteriormente, guardo los errores que devuelve la validacion, solo en caso de que existan los mismos.
+    $errores = validarLogin($_POST);
+
+// si valirdarLogin , no me devuelve ningun error, es decir, SI MI ARRAY ERRORES SE ENCUENTRA VACIO, entro al if
+    if(empty($errores)) {
+	// me guardo en la variable $usuario los datos del usuario que se quiere loguear
+      $usuario = buscarPorMail($_POST["mail"]);
+	 // guardo al ID del usuario en session.
+      loguear($usuario);
+
+	  // si checkean "recordarme" guardo al usuario en su cookie por 30 dias
+      if (isset($_POST["recordame"])) {
+        setcookie("idUser", $usuario["id"], time() + 60 * 60 * 24 * 30);
+      }
+// redirecciono al usuario a su perfil
+      header("location:perfilDeUsuario.php?id=" . $usuario["id"]);exit;
+    }
+  }
+?>
 
 <!DOCTYPE html>
 <html>
@@ -41,9 +70,6 @@
           </li>
           <li>
           <a href="#">FAQ's</a>
-        </li>
-        <li>
-          <a href="registro.php">Registrate</a>
         </li>
       <ul/>
     </nav>

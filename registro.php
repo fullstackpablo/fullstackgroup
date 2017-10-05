@@ -39,7 +39,10 @@
 
 		// hago un set en $successSave indicando que se guardo la data
 		$successSave = "Registro guardado con exito!!!";
+		header ("Location: felicidad.php");
+		exit;
 	}
+
 
 
 ?>
@@ -88,9 +91,6 @@
           </li>
           <li>
           <a href="#">FAQ's</a>
-				</li>
-				<li>
-					<a href="login.php">Ingresá</a>
 				</li>
       <ul/>
     </nav>

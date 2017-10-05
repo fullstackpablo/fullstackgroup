@@ -108,13 +108,13 @@
 // le agrego un salto de linea (un enter), al final de la linea
     $json = $json . PHP_EOL;
 // guardo el usuario en "usuarios.json" desde la ultima linea, en caso de que no exista el archivo .json, le sentencia "FILE_APPEND" crea el archivo.
-    file_put_contents("usuarios.json", $json, FILE_APPEND);
+    file_put_contents("people.json", $json, FILE_APPEND);
   }
 
 // creo la funcion traerTodos para traerme TODOS los usuarios que tenga en mi json
   function traerTodos() {
     //me traigo todo el json, en formato json
-    $archivo = file_get_contents("usuarios.json");
+    $archivo = file_get_contents("people.json");
 
     // esto me arma un array, en cada clave, un usuario entero
     $usuariosJSON = explode(PHP_EOL, $archivo);
