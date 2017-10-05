@@ -87,11 +87,15 @@
             </a>
           </li>
           <li>
-          <a href="#">FAQ's</a></li>
+          <a href="#">FAQ's</a>
+				</li>
+				<li>
+					<a href="login.php">Ingresá</a>
+				</li>
       <ul/>
     </nav>
     <div class="nav-right">
-        <a href="login.php">Ingresa</a>
+        <a href="login.php">Ingresá</a>
     </div>
   </header>
   <div class="register-container">

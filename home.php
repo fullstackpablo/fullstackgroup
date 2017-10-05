@@ -36,7 +36,15 @@
                 <a href="#conoce">Conocenos</a>
               </li>
               <li>
-              <a href="#">FAQ's</a></li>
+              <a href="#">FAQ's</a>
+            </li>
+            <li>
+              <a href="login.php">Ingresa</a>
+            </li>
+            <li>
+              <a href="registro.php">Registrate</a>
+            </li>
+        <ul/>
           <ul/>
         </nav>
         <div class="nav-right">
