@@ -1,78 +1,185 @@
 *{
   box-sizing: border-box;
-}
+ }
 
 body{
-  background-image: url("../images/hotdogs.jpg");
-  background-attachment: fixed;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Raleway', comic;
   text-align: center;
-  color: rgb(255, 255, 255);
-  font-size: 1.7em;
-  background-color: #012d77;
+  color: #000;
+  font-size: 16px;
+  background-color: #fff;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: block;
 }
+
+img{
+  width: 100%;
+}
+
+.main-header{
+  background-color: #ea9652;
+  overflow: hidden;
+}
+
+.logo{
+  width: 15%;
+  height: 60px;
+  /*background-color: green;*/
+  float: left;
+  line-height: 60px;
+}
+
+.logo a{
+  color: #2b2d42;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.logo a img{
+  width: 32px;
+  height: auto;
+  line-height: 60px;
+}
+
+.open{
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #000;
+  border-radius: 50%;
+  color: #fff;
+}
+
+#abreNav{
+  display: none;
+}
+
+/* selector de hermanos */
+#abreNav:checked ~ ul{
+  width: 100vw;
+}
+
+.close{
+  position: absolute;
+  z-index: 200;
+  right: 10px;
+  top: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.nav-container ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: fixed;
+  overflow: hidden;
+  width: 0;
+  height: 100vh;
+  background-color: #ea9652;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  transition: 350ms;
+}
+
+.nav-container ul li a{
+  display: block;
+  text-align: left;
+  color: #2b2d42;
+  position: relative;
+  z-index: 100;
+  padding: 15px;
+  border-bottom: solid 1px #fff;
+}
+
+.nav-right{
+  /*background-color: black;*/
+  float: right;
+  margin-top: 15px;
+}
+
+.nav-right a{
+  margin: 0 10px;
+  background-color: #ffdda1;
+  padding: 10px;
+  border-radius: 8px;
+  color: #012d77;
+}
+
 
 a{
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-size: 1.1em;
-  font-family: 'Bad Script', cursive;
-}
-
-/*a:hover{
-  color: rgb(45, 194, 204);   /*Esto hay que verlo porque aplica a todo el body*/
-}*/
-
-
-.main-nav{
-  background-color: rgba(121, 121, 121,0.4);
-  width: 100%;
-}
-
-.main-nav ul{
-  list-style: none; /* Saca la viñeta de los <li> */
-  margin: 0;
-  padding: 0;
-  text-align: center; /* centra horizontalmente los <li> pues estos están como display: inline-block*/
-}
-
-.main-nav li{
-  display: inline-block; /* Los alinea en horizontal y los vuelve un elemento de semi bloque */
-  margin: 0 15px;
-}
-
-.main-nav a{
-  font-size: 17px;
-  text-decoration: none; /* Saca el subrayado */
-  color: #ffffff;
-  display: block;
-  padding: 10px 15px; /* de arriba y abajo,   de los costados   */
-}
-
-.main-nav a i{
-  display: inline-block; /* para darle tamaño al <i> */
-  vertical-align: middle; /*alinea verticalmente hermanos de inline-block*/
-  width: 30px;
-  height: 30px;
-  background-color: #777;
-  color: #FFF;
-  line-height: 30px; /*Centra verticalmente el contenido*/
-  border-radius: 50%; /*Redondea las esquinas*/
-}
-
-.login{
-  background-color: rgba(37, 219, 77,0.8);
-  border-radius: 5%;
-  padding: 5px 10px;
-}
-
-.sugerencias{
-  color: #000;
-}
+  color: #2b2d42;
+ }
 
 .banner{
   width: 100%;
+  height: auto;
+  margin: 0 0;
+  padding: 0 0;
   border: solid 1px #cded4b;
+  display: block;
+}
+.logo_completo{
+  max-width: 50%;
+  clear: both;
+  margin: 30px auto 15px auto;
+  position: relative;
+  left: 50%;
+  transform: translate(-100%);
+  text-align: center;
+}
+
+.img_logo{
+  width: 20vw;
+  padding: 0;
+  display: inline-block;
+}
+
+.letra_logo{
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/*------------------Container Grillas----------------------------*/
+.grilla{
+  width: 30vw;
+  height: 80vh;
+  margin: 10px;
+  float: left;
+}
+.grilla img{
+  display: inline-block;
+  width: 25vw;
+}
+.grilla h4{
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  margin: 5px;
+}
+.grilla p{
+  clear: both;
+  margin: 5px;
+}
+.grilla a{
+  clear: both;
+  background-color: #ea9652;
+	color: #fff;
+	display: inline-block;
+	padding: 15px;
+	margin-bottom: 10px;
+  clear: both;
+  position: relative;
+  text-align: center;
 }
 
 /*-------------------Registro y Login----------------------------*/
@@ -88,20 +195,34 @@ a{
   font-size: 16px;
 }
 .form-box a{
-  color:blue;
+  color:#012d77;
 }
 
-.register{
+.register-container{
   width: 380px;
+  height: auto;
   display: block;
-  margin: auto;
-  padding: 20px 20px;
+  padding: 0;
+  margin: 0 0;
   display: inline-block;
 }
 
-.register input{
+.tos{
   width: 300px;
-  height: 35px;
+}
+
+.tos .check-box{
+  position: relative;
+  float: left;
+}
+
+.register a{
+  font-size: 16px;
+}
+
+.register input{
+  width: 80%;
+  height: 40px;
   padding: 5px 5px;
   font-size: 20px;
   text-align: center;
@@ -114,7 +235,7 @@ a{
 }
 
 button{
-  width: 70%;
+  width: 80%;
   height: 40px;
   margin-left: auto;
   background-color: #EA8A2A;
@@ -122,6 +243,23 @@ button{
   border-radius: 3%;
   color:white;
   font-size: 22px;
+}
+
+.register-container{
+  width: 100%;
+  height: auto;
+  background-image: url("../images/hotdogs.jpg");
+  background-attachment:scroll;
+  margin: 0;
+  padding: 0;
+}
+
+.tos{
+  display: inline-block;
+  width: 300px;
+  height: 35px;
+  padding: 0;
+  margin: 0;
 }
 
 .login-box{
@@ -159,6 +297,7 @@ button{
 .recover-box input{
   width: 300px;
   height: 35px;
+  margin: 10px 10px;
   padding: 5px 5px;
   font-size: 20px;
   text-align: center;
@@ -173,4 +312,64 @@ button{
   border-radius: 3%;
   color:white;
   font-size: 22px;
+}
+
+.faqs{
+  width: 100%;
+  height: 23.43%;
+}
+
+.preg {
+  display: block;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.img_cubiertos{
+  width: 15px;
+  display: inline-block;
+  float: left;
+
+  border-radius: 50%;
+}
+
+
+p{
+  clear: both;
+}
+
+
+
+/****** Media-Queries******/
+@media (min-width: 850px) {
+  .open, .close{
+    display: none;
+  }
+
+  .main-header{
+    padding: 10px;
+  }
+
+  .nav-container{
+    float: left;
+    margin-left: 50px;
+  }
+
+  .nav-container ul{
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+  .nav-container ul li{
+    display: inline-block;
+  }
+
+  .nav-container ul li a{
+    border-bottom: none;
+  }
+
+  .grilla, img, h4{
+
+  }
+
 }

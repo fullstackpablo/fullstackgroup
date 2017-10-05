@@ -1,0 +1,271 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+ }
+
+body{
+  font-family: 'Raleway', comic; /*JB por que*/
+  text-align: center;
+  color: #2b2d42;
+  font-size: 16px;
+  /*background-color: #fff;/*naranja claro vs bco*/
+  position: relative;
+  display: block;
+}
+
+header{
+  position: relative;
+}
+
+nav{
+  width: 100%;
+  height: 60px;
+  background-color: #ea9652;
+  display: inline-block;
+}
+.nav-container{
+  width: 100%;
+  margin: 0 0;
+  padding: 0;
+  position: relative;
+  display: block;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.logo{
+  width: 15%;
+  height: 60px;
+  /*background-color: green;*/
+  float: left;
+  line-height: 60px;
+}
+
+.logo a{
+  color: #2b2d42;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.logo a img{
+  width: 32px;
+  height: auto;
+  line-height: 60px;
+}
+.nav-menu{
+  width: 40%;
+  height: 60px;
+  /*background-color: yellow;*/
+  line-height: 60px;
+  margin: 0;
+  float: left;
+  position: relative
+}
+
+.nav-menu ul{
+  margin: 0;
+  padding: 0;
+}
+.nav-menu li{
+  display: inline-block;
+  line-height: 60px;
+  margin: 0 30px;
+}
+
+.nav-right{
+  width: 30%;
+  height: 60px;
+  /*background-color: black;*/
+  position: relative;
+  margin: 0 35px;
+  float: right;
+  line-height: 60px;
+}
+
+.nav-right a{
+  margin: 0 20px;
+  background-color: #ffe5a0;
+  border-radius: 5%;
+  color: #2b2d42;
+  width: 25%;
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
+  position: relative;
+}
+
+a{
+  text-decoration: none;
+  color: #2b2d42;
+ }
+
+.banner{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+/*border: solid 1px #cded4b*/;
+  display: block;
+}
+
+/*-------------------Registro y Login----------------------------*/
+
+  .form-box{
+  background-color: #d6efff;
+  /*opacity: 0.9;*/
+  width: 30%;
+  margin:auto;
+  height: auto;
+  padding: 20px 20px;
+  border-radius: 2%;
+  color: black;
+  font-size: 16px;
+  margin-top: 130px;  
+}
+.form-box a{
+  color:#2b2d42;
+}
+
+.tos{
+  width: 300px;
+}
+
+.tos .check-box{
+  position: relative;
+  float: left;
+}
+
+.register{
+  width: 100%;
+  height: auto;
+  color: #2b2d42;
+  position: relative;
+}
+
+.register a{
+  font-size: 16px;
+}
+
+.register input{
+  width: 80%;
+  height: auto;
+  padding: 5px 5px;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.register .check-box{
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+button{
+  width: 80%;
+  height: 40px;
+  margin-left: auto;
+  background-color: #ea9652;
+  border: none;
+  border-radius: 3%;
+  color:#2b2d42;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+
+
+.tos{
+  display: inline-block;
+  width: 80%;
+  height: 35px;
+  padding: 0;
+  margin: 0;
+}
+
+.login-box{
+  
+  width: 100%;
+  height: auto;
+  color: #2b2d42;
+  position: relative;
+}
+
+.login-box input{
+  width: 80%;
+  height: 35px;
+  padding: 5px 5px;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.login-box .check-box{
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+.recover-box{
+  background-color: white;
+  width: 380px;
+  display: block;
+  margin: auto;
+  padding: 20px 20px;
+  display: inline-block;
+}
+
+.recover-box input{
+  width: 300px;
+  height: 35px;
+  margin: 10px 10px;
+  padding: 5px 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.recover-box button{
+  width: 70%;
+  height: 40px;
+  margin-left: auto;
+  background-color: #EA8A2A;
+  border: none;
+  border-radius: 3%;
+  color:white;
+  font-size: 22px;
+}
+
+.faqs{
+  width: 100%;
+  height: 23.43%;
+}
+
+.preg{
+  width: 45%;
+  height: 40%;
+  max-height: 400px;
+  float: left;
+  margin: 0 5px;
+  text-align: center;
+}
+
+.conocenos{
+  width: 45%;
+  height: 40%;
+  max-height: 400px;
+  float: left;
+  margin: 0 5px;
+  text-align: center;
+}
+
+span{
+  font-size: 14px;
+  color: #2b2d42;
+} 
+
+span a{
+  font-weight: bold;
+  color: #2b2d42;
+}

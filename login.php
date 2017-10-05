@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 
@@ -6,6 +8,7 @@
   <meta content="width=device-width" name="viewport">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- <link rel="stylesheet" href="css/styles2.css"> -->
   <link rel="shortcut icon" href="images/cubiertos.ico" />
   <link rel="stylesheet" href="css/register-login-body.css">
   <title>Inicio</title>
@@ -14,14 +17,14 @@
 <body>
   <header class="main-header">
     <div class="logo">
-      <a href="home.html"><img src="images/cubiertos.svg" alt="logo">CookHub</a>
+      <a href="home.php"><img src="images/cubiertos.svg" alt="logo">CookHub</a>
     </div>
     <nav class="nav-container">
       <input type="checkbox" id="abreNav">
       <label for="abreNav" class="open"><span class="ion-navicon-round"></span></label>
       <ul>
           <li>
-            <a href="home.html">
+            <a href="home.php">
               Inicio
             </a>
             <label for="abreNav" class="close"><span class="ion-close-circled"></span></label>
@@ -41,28 +44,29 @@
       <ul/>
     </nav>
     <div class="nav-right">
-        <a href="login.html">Ingresa</a>
-        <a href="registro.html">Registrate</a>
+        <a href="login.php">Ingresa</a>
+        <a href="registro.php">Registrate</a>
     </div>
-    <!-- <div class="logo_completo">
-      <img class="img_logo" src="images/cubiertos.png" alt="">
-      <h1 class="letra_logo">CookHub</h1>
-    </div> -->
   </header>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div class="container">
+
+  <div class="login-container">
+    <h2>Ingresa para disfrutar las mejores comidas</h1>
     <div class="form-box">
-      <form class="recover-box" action="" method="post">
+      <form class="login-box" action="" method="post">
         <input type="email" name="mail" id="mail" required placeholder="Correo Electronico">
         <br>
         <br>
+        <input type="password" name="password" id="password" required placeholder="Contraseña">
+        <br>
+        <br>
         <button type="submit" name="login">
-          Recuperar Contraseña</button>
+          Ingresa</button>
       </form>
       <br>
+      <span class="recover-password">
+        <a href="recover.html">¿Olvidaste tu contraseña?</a>
+      </span>
+      <span class="register-link">No tenes una cuenta? <a href="registro.php">Registrate acá</a></span>
     </div>
 
 
