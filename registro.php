@@ -95,8 +95,8 @@
     </div>
   </header>
   <div class="register-container">
-    <h2>Registrate para disfrutar las mejores comidas</h1>
     <div class="form-box">
+			<h2>Registrate para disfrutar las mejores comidas</h2>
       <form class="register" action="registro.php" method="post" id="formCheckPassword">
 				<input type="text" name="name" id="name" required placeholder="Nombre de Usuario">
 				<br>
@@ -114,7 +114,7 @@
         <br>
         <div class="tos">
         <input class="check-box" type="checkbox" name="TOS" id="TOS" required>
-        <label>Acepto los <a href="terminos.html">Términos y Condiciones</a> </label>
+        <label>Acepto los <a href="terminos.php">Términos y Condiciones</a> </label>
         </div>
         <br>
         <br>
