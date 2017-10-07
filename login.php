@@ -4,29 +4,31 @@ require_once("funciones.php");
   if(estaLogueado()) {
     header("location:inicio.php");exit;
   }
+
 //declaro array de errores vacio !
   $errores = [];
 
 //si me envian algo por post, entro a este if
   if ($_POST) {
-	 // en el array "errores", declarado vacio anteriormente, guardo los errores que devuelve la validacion, solo en caso de que existan los mismos.
+   // en el array "errores", declarado vacio anteriormente, guardo los errores que devuelve la validacion, solo en caso de que existan los mismos.
     $errores = validarLogin($_POST);
 
 // si valirdarLogin , no me devuelve ningun error, es decir, SI MI ARRAY ERRORES SE ENCUENTRA VACIO, entro al if
     if(empty($errores)) {
-	// me guardo en la variable $usuario los datos del usuario que se quiere loguear
+  // me guardo en la variable $usuario los datos del usuario que se quiere loguear
       $usuario = buscarPorMail($_POST["mail"]);
-	 // guardo al ID del usuario en session.
+   // guardo al ID del usuario en session.
       loguear($usuario);
 
-	  // si checkean "recordarme" guardo al usuario en su cookie por 30 dias
+    // si checkean "recordarme" guardo al usuario en su cookie por 30 dias
       if (isset($_POST["recordame"])) {
         setcookie("idUser", $usuario["id"], time() + 60 * 60 * 24 * 30);
       }
 // redirecciono al usuario a su perfil
-      header("location:perfilDeUsuario.php?id=" . $usuario["id"]);exit;
+      header("location:profile.php?id=" . $usuario["id"]);exit;
     }
   }
+
 ?>
 
 <!DOCTYPE html>
@@ -81,11 +83,14 @@ require_once("funciones.php");
   <div class="login-container">
     <div class="form-box">
       <h2>Ingresa para disfrutar las mejores comidas</h2>
-      <form class="login-box" action="" method="post">
+      <form class="login-box" action="login.php" method="post">
         <input type="email" name="mail" id="mail" required placeholder="Correo Electronico">
         <br>
         <br>
         <input type="password" name="password" id="password" required placeholder="Contraseña">
+        <br>
+        <br>
+        <input style="position: relative; transform: translateY(75%); transform: translateX(-30%); " type="checkbox" name="recordame"><legend style="position: relative; transform: translateY(-155%);">Recuérdame</legend>
         <br>
         <br>
         <button type="submit" name="login">

@@ -14,6 +14,21 @@
 		"mail" => "",
 		"password" => ""
 	];
+if ($_POST) {
+	if ($_FILES["profile_pic"]["error"] == UPLOAD_ERR_OK){
+		$nombreImagen = $_POST["mail"];
+		$nombre = $_FILES["profile_pic"]["name"];
+		$archivo = $_FILES["profile_pic"]["tmp_name"];
+		$ext = pathinfo($nombre, PATHINFO_EXTENSION);
+		$miArchivo = dirname(__FILE__) . "/users/" . $nombreImagen . "." . $ext;
+		move_uploaded_file($archivo, $miArchivo);
+		echo "<h2>Se subió tu archivo</h2>";
+	} else {
+		echo "<h1>No vino la imagen </h1>";
+
+	}
+
+}
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$isReceived = true;
@@ -101,7 +116,10 @@
   <div class="register-container">
     <div class="form-box">
 			<h2>Registrate para disfrutar las mejores comidas</h2>
-      <form class="register" action="registro.php" method="post" id="formCheckPassword">
+			<form class="register" action="registro.php" method="post" id="formCheckPassword" enctype="multipart/form-data">
+				<input type="file" name="profile_pic" accept="image/*">
+				<br>
+				<br>
 				<input type="text" name="name" id="name" required placeholder="Nombre de Usuario">
 				<br>
         <br>

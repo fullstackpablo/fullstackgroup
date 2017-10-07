@@ -1,3 +1,14 @@
+<?php
+require_once("funciones.php");
+//si NO esta logueado, redirecciono al login
+if(!estaLogueado()) {
+  header("location:login.php");exit;
+}
+// si la persona esta logueada, traigo todos los usuario y los guardo en $usuarios
+$usuarios = traerTodos();
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -94,7 +105,7 @@
         <div class="preg">
           <img src="images/cubiertos.png" class="img_cubiertos">
           <h3>¿Cómo puedo registrarme?</h3>
-          <p>En la barra de navegación tenés la opción LOGIN. Acá te dejamos un link:<a href="login.php">LOGIN</a></p>
+          <p>En la barra de navegación tenés la opción LOGIN. Acá te dejamos un <a href="registro.php"><abbr title="Hacé click y te redireccionaremos en breve">link</abbr></a></p>
         </div>
         <div class="preg">
           <img src="images/cubiertos.png" class="img_cubiertos">
